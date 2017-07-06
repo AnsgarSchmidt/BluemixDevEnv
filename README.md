@@ -38,7 +38,7 @@ ansi/bluemixcli /bin/bash
 1. Username and passwd are the normal Bluemix credentials.
 2. Org and space are the same as you use inside Bluemix:
 
-![parameter](https://github.com/AnsgarSchmidt/BluemixDevEnv/blob/master/parameters.png)
+![parameter](https://github.com/AnsgarSchmidt/BluemixDevEnv/raw/master/parameters.png)
 
 3. AccountID can be extracted when pressing on "Manage Organisation" and then scoll to the end of the current URL
 
