@@ -11,5 +11,11 @@ wsk sdk install docker
 . .bx_dockerrc 
 docker ps
 
-echo "Please execute these lines:"
+echo "---------------------------------"
+echo "-- Please execute these line   --"
+echo "-- In order to set environment --"
+echo "-- variables for the docker    --"
+echo "-- client:                     --"
+echo "---------------------------------"
 echo ". .bx_dockerrc"
+echo ""
