@@ -33,10 +33,12 @@ ansi/bluemixcli /bin/bash
 ## Where to get the parameters
 1. Username and passwd are the normal Bluemix credentials.
 2. Org and space are the same as you use inside Bluemix:
-![parameter](parameters.png)
+
+![parameter](https://github.com/AnsgarSchmidt/BluemixDevEnv/blob/master/parameters.png)
 
 3. AccountID can be extracted when pressing on "Manage Organisation" and then scoll to the end of the current URL
-![accountID](accountid.png)
+
+![accountID](https://github.com/AnsgarSchmidt/BluemixDevEnv/raw/master/accountid.png)
 
 4. Openwhisk auth key is available for the seleted org and space here: https://console.bluemix.net/openwhisk/learn/cli
 
@@ -47,3 +49,5 @@ credentials are done by the init.sh script
 ```
 init.sh
 ```
+
+The host files are located in /root/host and can we used normaly within the docker container. 
