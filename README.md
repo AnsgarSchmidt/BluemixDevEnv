@@ -2,6 +2,7 @@
 [![Docker Build Statu](https://img.shields.io/docker/build/ansi/bluemixcli.svg)]() 
 [![Docker Pulls](https://img.shields.io/docker/pulls/ansi/bluemixcli.svg)]()
 [![](https://badge.imagelayers.io/ansi/bluemixcli:latest.svg)]()
+
 Docker container with Bluemix CLI clients installed and configured. So far the container
 contains: 
 
