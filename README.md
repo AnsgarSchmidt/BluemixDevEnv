@@ -1,6 +1,7 @@
 # BluemixDevEnv
 Docker container with Bluemix CLI clients installed and configured. So far the container
 contains 
+
 1. Cloudfoundry cf tool
 2. Bluemix tool (similar to cf)
 3. OpenWisk tool
@@ -17,6 +18,7 @@ variables.
 5. BX_ACCOUNT_ID *Users Account ID*
 6. WSK_ATH *The OpenWhisk authentication token based on org and space*
 
+```
 docker run -it --rm                        \
 -e BX_USERNAME=**Bluemix Username**        \
 -e BX_PASSWORD=**Bluemix Password**        \
@@ -25,11 +27,11 @@ docker run -it --rm                        \
 -e BX_ACCOUNT_ID=**Bluemix Account ID**    \
 -e WSK_AUTH=**Openwhisk Authentification** \
 ansi/bluemixcli /bin/bash
+```
 
 ## Where to get the parameters
 
-![parameter] parameters.png
+![parameter](parameters.png)
 
-![accountID] accountid.png
 
- 
+![accountID](accountid.png)
