@@ -7,15 +7,17 @@ bx ic init | grep export >> /root/.bx_dockerrc
 
 wsk property set --apihost openwhisk.ng.bluemix.net --auth ${WSK_AUTH}
 wsk sdk install docker
+wsk sdk install bashauto
 
 . .bx_dockerrc 
 docker ps
 
-echo "---------------------------------"
-echo "-- Please execute these line   --"
-echo "-- In order to set environment --"
-echo "-- variables for the docker    --"
-echo "-- client:                     --"
-echo "---------------------------------"
+echo "----------------------------------"
+echo "-- Please execute these lines   --"
+echo "-- In order to set environment  --"
+echo "-- variables for the docker     --"
+echo "-- client and wsk autocomplete: --"
+echo "----------------------------------"
 echo ". .bx_dockerrc"
+echo ". wsk_cli_bash_completion.sh"
 echo ""
