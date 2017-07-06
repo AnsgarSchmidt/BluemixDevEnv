@@ -25,3 +25,8 @@ run bx plugin install IBM-Containers -r Bluemix
 run wget https://openwhisk.ng.bluemix.net/cli/go/download/linux/amd64/wsk
 run chmod 700 wsk
 run mv wsk /usr/local/bin/
+
+#init script
+workdir /root
+copy init.sh /root/
+run chmod 700 init.sh
