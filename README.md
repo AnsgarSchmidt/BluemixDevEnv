@@ -11,8 +11,8 @@ docker run -it --rm                      \
 -e WSK_AUTH=<Openwhisk Authentification> \
 ansi/bluemixcli /bin/bash
 
-![parameter] parameters.png
 
-![accountID] accountid.png
+![parameter](parameters.png)
 
- 
+
+![accountID](accountid.png)
