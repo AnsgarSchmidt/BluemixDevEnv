@@ -2,7 +2,7 @@ from ubuntu:17.04
 
 run apt-get update     && \
     apt-get upgrade -y && \
-    apt-get install -y vim mc git screen wget curl bash-completion \
+    apt-get install -y vim mc git screen wget curl bash-completion npm \
                        apt-transport-https apt-utils ca-certificates software-properties-common
 
 #docker
