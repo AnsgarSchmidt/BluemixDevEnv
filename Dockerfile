@@ -3,7 +3,8 @@ from ubuntu:17.04
 run apt-get update     && \
     apt-get upgrade -y && \
     apt-get install -y vim mc git screen wget curl bash-completion npm \
-                       apt-transport-https apt-utils ca-certificates software-properties-common
+                       apt-transport-https apt-utils ca-certificates software-properties-common \
+                       mosquitto-clients
 
 #docker
 run curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add -
