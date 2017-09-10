@@ -1,4 +1,4 @@
-from ubuntu:17.10
+from ubuntu:17.04
 
 run apt-get update     && \
     apt-get upgrade -y && \
@@ -22,7 +22,12 @@ run curl https://public.dhe.ibm.com/cloud/bluemix/cli/bluemix-cli/latest/Bluemix
 run Bluemix_CLI/install_bluemix_cli
 run rm -rf Bluemix_CLI
 run bx plugin install IBM-Containers    -r Bluemix
+
+#kubernetes
 run bx plugin install container-service -r Bluemix
+run curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl
+run chmod +x ./kubectl
+run sudo mv ./kubectl /usr/local/bin/kubectl
 
 #wsk
 run wget https://openwhisk.ng.bluemix.net/cli/go/download/linux/amd64/wsk
