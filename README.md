@@ -10,6 +10,7 @@ contains:
 2. Bluemix tool (similar to cf)
 3. OpenWisk tool
 4. Docker Client configured to use Bluemix container as daemon
+5. Kubernetes for Bluemix tool
 
 ## How to start it
 In order to be flexible all user specific parts are configured at runtime via environment
