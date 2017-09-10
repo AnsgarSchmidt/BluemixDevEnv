@@ -21,7 +21,8 @@ run apt-get update && apt-get install -y cf-cli
 run curl https://public.dhe.ibm.com/cloud/bluemix/cli/bluemix-cli/latest/Bluemix_CLI_amd64.tar.gz | tar xvz
 run Bluemix_CLI/install_bluemix_cli
 run rm -rf Bluemix_CLI
-run bx plugin install IBM-Containers -r Bluemix
+run bx plugin install IBM-Containers    -r Bluemix
+run bx plugin install container-service -r Bluemix
 
 #wsk
 run wget https://openwhisk.ng.bluemix.net/cli/go/download/linux/amd64/wsk
