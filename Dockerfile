@@ -27,7 +27,7 @@ run bx plugin install IBM-Containers    -r Bluemix
 run bx plugin install container-service -r Bluemix
 run curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl
 run chmod +x ./kubectl
-run sudo mv ./kubectl /usr/local/bin/kubectl
+run mv ./kubectl /usr/local/bin/kubectl
 
 #wsk
 run wget https://openwhisk.ng.bluemix.net/cli/go/download/linux/amd64/wsk
