@@ -1,4 +1,4 @@
-from ubuntu:17.04
+from ubuntu:17.10
 
 run apt-get update     && \
     apt-get upgrade -y && \
