@@ -22,7 +22,7 @@ variables.
 4. BX_SPACE **Space to be preselected**
 5. BX_ACCOUNT_ID **Users Account ID**
 6. WSK_ATH **The OpenWhisk authentication token based on org and space**
-
+7. KUB_CLUSTER **Kubernetes cluster name**
 ```
 docker run -it --rm                      \
 -e BX_USERNAME=<Bluemix Username>        \
@@ -31,6 +31,7 @@ docker run -it --rm                      \
 -e BX_SPACE=<Bluemix Space>              \
 -e BX_ACCOUNT_ID=<Bluemix Account ID>    \
 -e WSK_AUTH=<Openwhisk Authentification> \
+-e KUB_CLUSTER=<kubernetes cluster name> \
 -v ${PWD}:/root/host                     \
 ansi/bluemixcli /bin/bash
 ```
