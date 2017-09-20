@@ -38,7 +38,13 @@ run wget https://openwhisk.ng.bluemix.net/cli/go/download/linux/amd64/wsk
 run chmod 700 wsk
 run mv wsk /usr/local/bin/
 
-#init script
+#script
+run mkdir                     /root/bin
+copy init.sh                  /root/bin/
+#run chmod 700 init.sh
+copy pushVisualRecognition.sh /root/bin/
+#run chmod 700 /root/bin/pushVisualRecognition.sh
+run echo "PATH=\$PATH:/root/bin/"      >> /root/.bashrc
+run echo "echo \" -------> Please run init.sh <---------\"" >> /root/.bashrc
+
 workdir /root
-copy init.sh /root/
-run chmod 700 init.sh
