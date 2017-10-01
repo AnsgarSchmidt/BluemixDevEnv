@@ -1,8 +1,10 @@
 # BluemixDevEnv
 [![Docker Build Statu](https://img.shields.io/docker/build/ansi/bluemixcli.svg)](https://hub.docker.com/r/ansi/bluemixcli/) 
 [![Docker Pulls](https://img.shields.io/docker/pulls/ansi/bluemixcli.svg)](https://hub.docker.com/r/ansi/bluemixcli/)
-[![](https://badge.imagelayers.io/ansi/bluemixcli:latest.svg)](https://hub.docker.com/r/ansi/bluemixcli/)
+[![Layers](https://badge.imagelayers.io/ansi/bluemixcli:latest.svg)](https://hub.docker.com/r/ansi/bluemixcli/)
+
 https://hub.docker.com/r/ansi/bluemixcli
+
 Docker container with Bluemix CLI clients installed and configured. So far the container
 contains: 
 
@@ -11,6 +13,9 @@ contains:
 3. OpenWisk tool
 4. Docker Client configured to use Bluemix container as daemon
 5. Kubernetes for Bluemix tool
+
+Usefull scripts (/root/bin/) for bluemix services:
+1. pushVisualRecognition.sh
 
 ## How to start it
 In order to be flexible all user specific parts are configured at runtime via environment

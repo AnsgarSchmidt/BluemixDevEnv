@@ -1,4 +1,4 @@
-from ubuntu:17.04
+from ubuntu:17.10
 
 run apt-get update     && \
     apt-get upgrade -y && \
@@ -7,7 +7,7 @@ run apt-get update     && \
                        mosquitto-clients imagemagick python virtualenv python-pip
 
 #SDK
-run pip install --upgrade watson-developer-cloud
+run pip install --upgrade watson-developer-cloud cloudfoundry-client
 
 #docker
 run curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add -
@@ -24,7 +24,8 @@ run apt-get update && apt-get install -y cf-cli
 run curl https://public.dhe.ibm.com/cloud/bluemix/cli/bluemix-cli/latest/Bluemix_CLI_amd64.tar.gz | tar xvz
 run Bluemix_CLI/install_bluemix_cli
 run rm -rf Bluemix_CLI
-run bx plugin install IBM-Containers    -r Bluemix
+run bx plugin install IBM-Containers     -r Bluemix
+run bx plugin install container-registry -r Bluemix
 
 #kubernetes
 run bx plugin install container-service -r Bluemix
@@ -41,9 +42,8 @@ run mv wsk /usr/local/bin/
 #script
 run mkdir                     /root/bin
 copy init.sh                  /root/bin/
-#run chmod 700 init.sh
 copy pushVisualRecognition.sh /root/bin/
-#run chmod 700 /root/bin/pushVisualRecognition.sh
+copy clearDomains.py          /root/bin/
 run echo "PATH=\$PATH:/root/bin/"      >> /root/.bashrc
 run echo "echo \" -------> Please run init.sh <---------\"" >> /root/.bashrc
 
