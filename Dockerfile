@@ -4,7 +4,7 @@ run apt-get update     && \
     apt-get upgrade -y && \
     apt-get install -y vim mc git screen wget curl bash-completion npm zip \
                        apt-transport-https apt-utils ca-certificates software-properties-common \
-                       mosquitto-clients imagemagick python virtualenv python-pip
+                       mosquitto-clients imagemagick python virtualenv python-pip redis-tools
 
 #SDK
 run pip install --upgrade watson-developer-cloud cloudfoundry-client
