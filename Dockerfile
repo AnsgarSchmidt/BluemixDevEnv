@@ -4,7 +4,8 @@ run apt-get update     && \
     apt-get upgrade -y && \
     apt-get install -y vim mc git screen wget curl bash-completion npm zip \
                        apt-transport-https apt-utils ca-certificates software-properties-common \
-                       mosquitto-clients imagemagick python virtualenv python-pip redis-tools
+                       mosquitto-clients imagemagick python virtualenv python-pip redis-tools \
+                       ruby-dev
 
 #SDK
 run pip install --upgrade watson-developer-cloud cloudfoundry-client
@@ -38,6 +39,9 @@ EXPOSE 8001
 run wget https://openwhisk.ng.bluemix.net/cli/go/download/linux/amd64/wsk
 run chmod 700 wsk
 run mv wsk /usr/local/bin/
+
+#travis
+run gem install travis
 
 #script
 run mkdir                     /root/bin
