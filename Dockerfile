@@ -43,6 +43,9 @@ run mv wsk /usr/local/bin/
 #travis
 run gem install travis
 
+#platformio
+run pip install platformio
+
 #script
 run mkdir                     /root/bin
 copy init.sh                  /root/bin/
