@@ -4,7 +4,7 @@ from   cloudfoundry_client.client import CloudFoundryClient
 target_endpoint = 'https://api.ng.bluemix.net'
 
 client = CloudFoundryClient(target_endpoint, skip_verification=True)
-client.init_with_user_credentials('user', 'passwd')
+client.init_with_user_credentials('ansgar.schmidt@de.ibm.com', 'Dronk12')
 
 for organization in client.organizations:
     #print json.dumps(organization, indent=4, sort_keys=True)
