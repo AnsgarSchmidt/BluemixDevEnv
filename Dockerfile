@@ -1,4 +1,4 @@
-from ubuntu:16.04
+from ubuntu:17.04
 
 run apt-get update     && \
     apt-get upgrade -y && \
@@ -25,11 +25,13 @@ run apt-get update && apt-get install -y cf-cli
 run curl https://public.dhe.ibm.com/cloud/bluemix/cli/bluemix-cli/latest/Bluemix_CLI_amd64.tar.gz | tar xvz
 run Bluemix_CLI/install_bluemix_cli
 run rm -rf Bluemix_CLI
-run bx plugin install IBM-Containers     -r Bluemix
 run bx plugin install container-registry -r Bluemix
+run bx plugin install container-service  -r Bluemix
+run bx plugin install cloud-functions    -r Bluemix
+run bx plugin install dev                -r Bluemix
+run bx plugin install logging-cli        -r Bluemix
 
 #kubernetes
-run bx plugin install container-service -r Bluemix
 run curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl
 run chmod +x ./kubectl
 run mv ./kubectl /usr/local/bin/kubectl
@@ -51,6 +53,8 @@ run mkdir                     /root/bin
 copy init.sh                  /root/bin/
 copy pushVisualRecognition.sh /root/bin/
 copy clearDomains.py          /root/bin/
+copy start_cluster.sh         /root/bin/
+
 run echo "PATH=\$PATH:/root/bin/"      >> /root/.bashrc
 run echo "echo \" -------> Please run init.sh <---------\"" >> /root/.bashrc
 
