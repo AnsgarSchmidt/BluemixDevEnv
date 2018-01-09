@@ -1,4 +1,4 @@
-from ubuntu:17.04
+from ubuntu:16.04
 
 run apt-get update     && \
     apt-get upgrade -y && \
@@ -36,6 +36,12 @@ run curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s
 run chmod +x ./kubectl
 run mv ./kubectl /usr/local/bin/kubectl
 EXPOSE 8001
+
+#helm
+RUN curl https://storage.googleapis.com/kubernetes-helm/helm-v2.8.0-rc.1-linux-amd64.tar.gz | tar xvz
+RUN chmod +x linux-amd64/helm
+RUN mv linux-amd64/helm /usr/local/bin/helm
+RUN rm -rf linux-amd64
 
 #wsk
 run wget https://openwhisk.ng.bluemix.net/cli/go/download/linux/amd64/wsk
