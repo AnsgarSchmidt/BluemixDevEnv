@@ -1,4 +1,4 @@
-from ubuntu:16.04
+from ubuntu:17.10
 
 run apt-get update     && \
     apt-get upgrade -y && \
@@ -42,6 +42,10 @@ RUN curl https://storage.googleapis.com/kubernetes-helm/helm-v2.8.0-rc.1-linux-a
 RUN chmod +x linux-amd64/helm
 RUN mv linux-amd64/helm /usr/local/bin/helm
 RUN rm -rf linux-amd64
+
+#istio
+RUN curl -L https://git.io/getLatestIstio | sh -
+RUN echo "PATH=\$PATH:/root/istio-0.4.0/bin" >> /root/.bashrc
 
 #wsk
 run wget https://openwhisk.ng.bluemix.net/cli/go/download/linux/amd64/wsk
