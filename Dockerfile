@@ -44,7 +44,7 @@ RUN mv linux-amd64/helm /usr/local/bin/helm
 RUN rm -rf linux-amd64
 
 #istio
-RUN curl -L https://git.io/getLatestIstio | sh -
+RUN cd /root && curl -L https://git.io/getLatestIstio | sh -
 RUN echo "PATH=\$PATH:/root/istio-0.4.0/bin" >> /root/.bashrc
 
 #wsk
