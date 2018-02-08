@@ -2,7 +2,7 @@ from ubuntu:17.10
 
 run apt-get update     && \
     apt-get upgrade -y && \
-    apt-get install -y vim mc git screen wget curl bash-completion npm zip \
+    apt-get install -y vim mc git screen wget curl bash-completion npm zip autoconf libtool \
                        apt-transport-https apt-utils ca-certificates software-properties-common \
                        mosquitto-clients imagemagick python virtualenv python-pip redis-tools \
                        ruby-dev
