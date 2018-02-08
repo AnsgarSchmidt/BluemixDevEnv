@@ -22,7 +22,7 @@ run echo "deb http://packages.cloudfoundry.org/debian stable main" | tee /etc/ap
 run apt-get update && apt-get install -y cf-cli
 
 #bx
-run curl https://public.dhe.ibm.com/cloud/bluemix/cli/bluemix-cli/0.6.4/IBM_Cloud_CLI_0.6.4_amd64.tar.gz | tar xvz
+run curl https://public.dhe.ibm.com/cloud/bluemix/cli/bluemix-cli/0.6.5/IBM_Cloud_CLI_0.6.5_amd64.tar.gz | tar xvz
 run Bluemix_CLI/install_bluemix_cli
 run rm -rf Bluemix_CLI
 run bx plugin install container-registry -r Bluemix
