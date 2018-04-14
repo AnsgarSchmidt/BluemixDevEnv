@@ -1,4 +1,4 @@
-from ubuntu:16.04
+from ubuntu:18.04
 
 run apt-get update     && \
     apt-get upgrade -y && \
