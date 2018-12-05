@@ -38,14 +38,14 @@ run mv ./kubectl /usr/local/bin/kubectl
 EXPOSE 8001
 
 #helm
-RUN curl https://storage.googleapis.com/kubernetes-helm/helm-v2.8.0-rc.1-linux-amd64.tar.gz | tar xvz
+RUN curl https://storage.googleapis.com/kubernetes-helm/helm-canary-darwin-amd64.tar.gz | tar xvz
 RUN chmod +x linux-amd64/helm
 RUN mv linux-amd64/helm /usr/local/bin/helm
 RUN rm -rf linux-amd64
 
 #istio
 RUN cd /root && curl -L https://git.io/getLatestIstio | sh -
-RUN echo "PATH=\$PATH:/root/istio-0.4.0/bin" >> /root/.bashrc
+RUN echo "PATH=\$PATH:/root/istio-1.0.4/bin" >> /root/.bashrc
 
 #wsk
 run wget https://openwhisk.ng.bluemix.net/cli/go/download/linux/amd64/wsk
