@@ -38,12 +38,12 @@ run mv ./kubectl /usr/local/bin/kubectl
 EXPOSE 8001
 
 #helm
-RUN curl https://storage.googleapis.com/kubernetes-helm/helm-canary-darwin-amd64.tar.gz | tar xvz
+RUN curl https://storage.googleapis.com/kubernetes-helm/helm-canary-linux-amd64.tar.gz | tar xvz
 RUN chmod +x linux-amd64/helm
 RUN mv linux-amd64/helm /usr/local/bin/helm
 RUN rm -rf linux-amd64
 
-#istio
+#istio (echo must be updated manually)
 RUN cd /root && curl -L https://git.io/getLatestIstio | sh -
 RUN echo "PATH=\$PATH:/root/istio-1.0.4/bin" >> /root/.bashrc
 
